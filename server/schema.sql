@@ -2,13 +2,18 @@ CREATE DATABASE chat;
 
 USE chat;
 
-CREATE TABLE messages (
-  /* Describe your table here.*/
+CREATE TABLE users (
+  id INTEGER PRIMARY KEY,
+  username TEXT NOT NULL
 );
 
-/* Create other tables and define schemas for them here! */
-
-
+CREATE TABLE messages (
+  /* Describe your table here.*/
+  id INTEGER PRIMARY KEY,
+  msg TEXT NOT NULL,
+  author INTEGER, 
+  FOREIGN KEY (author) REFERENCES users(id) 
+);
 
 
 /*  Execute this file from the command line by typing:
