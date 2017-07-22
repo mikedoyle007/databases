@@ -10,9 +10,10 @@ CREATE TABLE users (
 CREATE TABLE messages (
   /* Describe your table here.*/
   id INTEGER PRIMARY KEY,
-  msg TEXT NOT NULL,
-  author INTEGER, 
-  FOREIGN KEY (author) REFERENCES users(id) 
+  message TEXT NOT NULL,
+  userId INTEGER, 
+  roomname TEXT NOT NULL,
+  FOREIGN KEY (userId) REFERENCES users(id)  
 );
 
 
